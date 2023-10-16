@@ -9,7 +9,12 @@ export default {
       fontFamily:{
         rancho: ['Rancho', 'cursive'],
         raleway: ['Raleway', 'sans-serif'],
+      },
+      colors: {
+        primary: '#E3B577',
+        secondery: '#331A15'
       }
+
     },
   },
   plugins: [require("daisyui")],
