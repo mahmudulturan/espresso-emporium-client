@@ -13,8 +13,10 @@ export default {
       colors: {
         primary: '#E3B577',
         secondery: '#331A15'
+      },
+      dropShadow: {
+        text: '4px 4px 8px rgba(0, 0, 0, 0.5)'
       }
-
     },
   },
   plugins: [require("daisyui")],
