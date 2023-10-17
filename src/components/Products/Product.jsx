@@ -1,8 +1,9 @@
 import { AiFillEye, AiFillDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import { MdModeEdit } from "react-icons/md";
 
 const Product = ({coffee}) => {
-    const {name, chef, taste, photo} = coffee;
+    const {name, chef, taste, photo, _id} = coffee;
     return (
         <div>
             <div className="flex gap-6 items-center justify-between py-6 px-6 bg-[#F5F4F1]">
@@ -13,7 +14,7 @@ const Product = ({coffee}) => {
                 <h3><span className="font-semibold">Taste:</span>{taste}</h3>
                 </div>
                 <div className="text-white flex flex-col gap-4">
-                    <button className="bg-[#D2B48C] text-xl py-1 px-1 rounded-md"><AiFillEye></AiFillEye></button>
+                    <Link to={`/coffees/${_id}`}><button className="bg-[#D2B48C] text-xl py-1 px-1 rounded-md"><AiFillEye></AiFillEye></button></Link>
                     <button className="bg-[#3C393B] text-xl py-1 px-1 rounded-md"><MdModeEdit></MdModeEdit></button>
                     <button className="bg-[#EA4744] text-xl py-1 px-1 rounded-md"><AiFillDelete></AiFillDelete></button>
                 </div>
@@ -21,5 +22,7 @@ const Product = ({coffee}) => {
         </div>
     );
 };
+
+
 
 export default Product;
